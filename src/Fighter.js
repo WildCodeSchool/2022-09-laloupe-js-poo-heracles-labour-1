@@ -10,7 +10,23 @@ class Fighter {
   }
 
   displayInfo() {
-    console.log(`${this.name} has ${this.life} 💙`);
+    console.log(`${this.name} has ${this.life}💙`);
+  }
+
+  fight(enemy) {
+    let damagePoints = Math.floor(Math.random() * this.strength) + 1;
+
+    damagePoints = enemy.dexterity - damagePoints;
+
+    if (damagePoints < 0) {
+      damagePoints = 0;
+    }
+
+    if (enemy.life - damagePoints < 0) {
+      enemy.life = 0;
+    } else {
+      enemy.life -= damagePoints;
+    }
   }
 }
 

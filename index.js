@@ -7,3 +7,8 @@ const nemean = new Fighter("🦁 Nemean Lion", 11, 13);
 
 heracles.displayInfo();
 nemean.displayInfo();
+
+heracles.fight(nemean);
+
+heracles.displayInfo();
+nemean.displayInfo();
