@@ -28,6 +28,10 @@ class Fighter {
       enemy.life -= damagePoints;
     }
   }
+
+  isAlive() {
+    return this.life > 0;
+  }
 }
 
 module.exports = Fighter;

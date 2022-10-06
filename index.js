@@ -14,7 +14,7 @@ nemean.displayInfo();
 // nemean.displayInfo();
 let rounds = 1;
 
-while (heracles.life > 0 && nemean.life > 0) {
+while (heracles.isAlive() && nemean.isAlive()) {
   heracles.fight(nemean);
   nemean.fight(heracles);
   console.log(`🕛 Round #${rounds}`);
@@ -27,7 +27,7 @@ while (heracles.life > 0 && nemean.life > 0) {
   rounds++;
 }
 
-if (heracles.life === 0) {
+if (!heracles.isAlive()) {
   console.log(`💀 ${heracles.name} is dead`);
   console.log(`🏆 ${nemean.name} wins (💙 ${nemean.life})`);
 } else {
